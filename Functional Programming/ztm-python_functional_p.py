@@ -119,3 +119,35 @@
 # my_list4 = [ numb for numb in range(0, 100) if numb % 2 == 0]
 
 # print(my_list4)
+
+# # /////////////////////////////
+
+# Set and Dictionary Comprehension
+
+# my_set = {char for char in "hallo"}
+
+# my_set = {char for char in range(0, 100)}
+
+# print(my_set)
+
+# simple_dict = {
+#     "a": 1,
+#     "b": 2
+# }
+
+# my_dict = {key:value**2 for key, value in simple_dict.items() if v % 2==0}
+
+# my_dict = {numb:numb*2 for numb in [1,2,3] }
+
+# print(my_dict)
+
+# //////////////////////////////
+
+# some_list = ['a', 'b', 'c', 'b', 'd', 'm', 'n', 'n']
+
+# duplicates = list(set([element for element in some_list if some_list.count(element) > 1]))
+
+# print(duplicates)
+
+# //////////////////////////////
+
