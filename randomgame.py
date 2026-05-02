@@ -1,38 +1,4 @@
-# a package is a folder
-
-
-# import packagename.modulename
-
-# Python is extrememly usefull because of externel module packages, in which you can borrow and extend the program code functionality. These are called python build in modules. 
-
-
-# there is extensive module library in existence which you even can find on the python homepage, there isa extensive list where you can find all kinds of modules. This is called the standard python library. this library comes with the python that you have installed. 
-
-# so when you code and build something and you need functions that helps you with what you are building, you can the search for its corresponging module on the internet, like python module "example" . most likely there would be, and other wise you might have to search more on different places, and if there realy is nothing you build your own file with functions and finaly import it as a module that you yourself have crafted. 
-
-
-# import random
-
-# print(dir(random.))
-
-# print(random.randint(1, 19))
-
-# print(random.choice([1,2,4,5]))
-
-# my_list = list(range(0, 10))
-
-# random.shuffle(my_list)
-
-# print(my_list)
-
-# when importing something from the standard library its better to from module import what is necessary  so people know what it is. 
-
-# import sys
-
-
-# sys.argv
-
-# Exercise
+# # Exercise
 
 # The goal is to write a game program, call it randomgame.py,
 # ask a user to guess a number for example between 1 and 10. 
@@ -43,10 +9,6 @@
 # and at the and say when the user got it right that the terminal prints: You are a genius!, and
 # if the user keeps getting it wrong the terminal will keep asking the user until the user gets it right
 # and also use validation in the program as well to make sure that the user enters something that has been provided by the terminal with as an option. 
-
-# import random
-
-# random.randrange()
 
 import random
 
