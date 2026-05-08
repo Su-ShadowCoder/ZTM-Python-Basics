@@ -116,3 +116,216 @@
 # Lesson: pip install
 
 # either install it via editor or do it manually trough the terminal. but nowadays you should make a virtual envirement to add pypi modules manually. check the IT-Manual for procedure. 
+
+# //////////////////////////////////////////////
+
+
+# //////////////////////////////////////////////
+
+# Lesson: Useful Modules 2
+
+
+# import datetime
+
+
+# print(datetime.time())
+
+# print(datetime.time(1,15,10))
+
+# print(datetime.date.today())
+
+# today_week_day = datetime.date.today()
+
+# print(datetime.date.weekday(today_week_day))
+
+
+# from array import array
+
+# arr = array('i', [1,2,3])
+
+# print(arr[0])
+
+# //////////////////////////////////////////////
+
+
+# //////////////////////////////////////////////
+
+# Lesson: How To Debug Code
+
+
+# mistakes in code of a program that causes the the program not work, are called bugs. as you keep trying to solve those mistakes and improve the code you are doing the act of debugging. 
+
+# Programs are full of errors or what we call bugss or for an even more convoluted term: Exceptions. 
+
+# The act of finding and removing these bugs/errors from the code is called debugging. 
+
+# Tools and good practices to debug:
+# -linting = is an extension or build in ide tool that highlights and supports you while you are coding. linting allows you to find errors before you even run the code. 
+# - using IDE's or Editor's = which has build-in tools that also supports you in writing good code and supports you to write if you set it right in accordance with the PEP8 conventions.
+# - Read errors = how to read error message properly and translate that what problem the python interpreter is running into. by doing so then understanding what the bug in the code is or the mistake. 
+# - reading python documentations about different kind of errors and recognizing them so you know what error you get, in turn allows you to then translate the error messages so you know where and what the bugs are.
+# - pdb = is a build in module in python which is part of the standard python library. use .settrace() from pdb. a method to translate an error very efficiently
+# - using print also is a good method to highligh  if something is working or not in the output. 
+
+# //////////////////////////////////////////////
+
+
+# //////////////////////////////////////////////
+
+# Lesson: Working With Files In Python
+
+
+# FILE I/O = I/O stands for input output. 
+
+# input image/pdf/what everyou want to work with
+# out compressed image, etc
+
+# with the open key word you can choose a file to work with
+
+
+
+# my_file = open("file1.txt")
+
+# print(my_file)
+# print(my_file.read())
+# my_file.seek(0)
+# print(my_file.read())
+# my_file.seek(0)
+# print(my_file.readline())
+# print(my_file.readline())
+# print(my_file.readlines())
+
+# my_file.close()
+
+
+
+# This read method is an open cursor, 
+# once you execute it it can only do it once before you do it the next time
+# with the seek method you can loophole that do read/print the file content multiple times.
+
+# After openning the file you have to manually close the file. so you can use this file somewhere 
+# else in the program.
+
+# //////////////////////////////////////////////
+
+
+# //////////////////////////////////////////////
+# Lesson: Read, Write, Append
+
+
+# with open('file1.txt') as my_file:
+# 	print(my_file.readlines())
+
+# with open("file1.txt", mode='r+') as my_file:
+# 	text = my_file.write(':D')
+# 	print(text) 
+
+# with mode r it only reads the file. without the mode it
+# automatically asummes you are reading.
+
+# if you want to write a file, you use the letter w. as mode='w'
+#  mode=r+ is for read and write.
+
+# when rewriting  the same text file you have to carefale that it would try to overwrite
+# and by proxy the new text will overwrite the old text, but in accordance with its length, 
+# which means that if there is a longer old text then the new text will only overwrite the amount
+# of characters it has and leaves the old text for the rest of its characters as it is.
+
+# In order to avoid doing that you use the append mode as here under in the example:
+# with open("file1.txt", mode='a') as my_file:
+# 	text = my_file.write(':D')
+# 	print(text) 
+
+# r to read
+# w to write - this will asume its a new file and we write a new
+# a to append add things properly without overwriting when in r+
+# r+ to read and write
+
+# with open("file1.txt", mode='w') as my_file:
+# 	text = my_file.write(':D')
+# 	print(text) 
+
+# be carefull that you use the right mode based on what you need. 
+
+# with open('app/sad.txt', mode='r') as my_file:
+# 	print(my_file.read())
+
+
+# w = write also creates a new file if it doesnt exist already or overwrites the existing 
+# one completely
+
+
+# This method of accessing the files is called absolute path 
+
+# with open('/home/abdullah/Desktop/app/sad.txt', mode='r') as my_file:
+# 	print(my_file.read())
+
+# sometimes you might see ./ this means from the current folder
+
+# with open('./app/sad.txt', mode='r') as my_file:
+# 	print(my_file.read())
+
+
+# The pathlib module allows your code to work with both linux and windows filesystem paths
+# Object-oriented filesystem paths
+
+
+# lesson: File IO Errors 
+
+# try:
+# 	with open('sad.txt', mode='x') as my_file:
+# 		print(my_file.read())
+# except FileNotFoundError as err:
+# 	print("file does not exist!")
+# 	raise err
+# except IOError as err:
+# 	print("IO Error!")
+# 	raise err
+
+
+# //////////////////////////////////////////////
+
+
+# //////////////////////////////////////////////
+# Lesson: Exercise: Translator
+
+# situation:
+# translate the txt file document by using a python script
+
+
+# strategy:
+# 1 first look for a translation module
+
+# 2 check and validate translation module
+
+# 3 make sure you have env for the module that belongs to the project
+
+# 4 install the module in the specific env folder
+
+# 5 read the documentation further in how to use it 
+
+# 6 write the file code and  use the method specefic for it 
+
+
+
+# from translate import Translator
+
+# translator = Translator(to_lang='ja')
+
+
+# try:
+# 	with open('./textfile.txt', mode='r+') as my_file:
+# 		text = my_file.read()
+# 		translation = translator.translate(text)
+# 		print(translation)
+# 		with open('./test-ja.txt', mode='w') as my_file2:
+# 			my_file2.write(translation)
+# except FileNotFoundError as err:
+# 	print('file does not exist!')
+
+
+# //////////////////////////////////////////////
+
+
+# //////////////////////////////////////////////
+# Lesson:
